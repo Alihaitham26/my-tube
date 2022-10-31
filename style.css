@@ -1,17 +1,23 @@
+/* globals */
 *{
   box-sizing: border-box;
+}
+html{
+  height: 100%;
 }
 body{
   background-color: #181818;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  height: 100%;
 }
-
 h1{
   margin: 0;
 }
 
+
+/* nav */
 nav {
   background-color: #222;
   display: flex;
@@ -21,6 +27,10 @@ nav {
   padding: 5px 20px;
   --height:40px;
 }
+.logo{
+  cursor: pointer;
+}
+
 .search-bar{
   display: flex;
   width: 50%;
@@ -35,16 +45,18 @@ nav {
   font-size: 13pt;
   padding-left: 3px;
 }
-.search-bar i{
+.search-bar button{
   height: var(--height);
-  width: 50px;
+  width: 60px;
   background-color: #323232;
   margin: 0;
   display: grid;
   place-items: center;
+  border: none;
+  cursor: pointer;
 }
-.search-bar i img{
-  width: 25px;
+.search-bar button img{
+  width: 22px;
 }
 .profile{
   height: var(--height);
@@ -58,4 +70,34 @@ nav {
   width: 80%;
   height: 80%;
   margin: 10%;
+}
+
+
+/* sidebar */
+.sidebar{
+  padding-top: 10px;
+  max-width: 25%;
+  background-color: red;
+  width: 240px;
+  background-color: #222;
+  height: 100%;
+}
+.sidebar ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+}
+.sidebar ul li{
+  height: 40px;
+  padding-left: 20px;
+  line-height: 40px;
+  font-size: 15pt;
+  cursor: pointer;
+}
+.sidebar .primary{
+  border-bottom: 1px solid #444;
+}
+.sidebar .primary li:first-child{
+  background-color: #444;
 }
